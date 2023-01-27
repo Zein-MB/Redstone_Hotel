@@ -88,6 +88,7 @@ main {
       div {
         display: grid;
         grid-gap: 10px;
+        position: relative;
 
         &:nth-child(3),
         &:nth-child(4) {
@@ -102,7 +103,6 @@ main {
           span {
             color: $mainColor;
           }
-
         }
 
         input {
@@ -119,46 +119,56 @@ main {
             outline: none;
           }
         }
-      }
-    }
 
-    button {
-      margin-top: 20px;
-      padding: 15px 20px;
-      font-size: 18px;
-      text-transform: uppercase;
-      font-weight: 700;
-      border: none;
-      color: $secondaryColor;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: .3s;
-      letter-spacing: 2px;
-
-      &.submit {
-        background-image: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);
-
-        &:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 5px 10px 0 rgb(85 68 85 / 27%);
-        }
-      }
-
-      &.reset {
-        background-color: #545454;
-
-        &:hover {
-          background-color: #000;
+        &:last-of-type {
+          i {
+            position: absolute;
+            bottom: 15px;
+            right: 20px;
+            cursor: pointer;
+            color: #4158D0;
+          }
         }
       }
     }
+  }
 
-    p a {
-      color: $mainColor;
+  button {
+    margin-top: 20px;
+    padding: 15px 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: none;
+    color: $secondaryColor;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s;
+    letter-spacing: 2px;
 
-      &:visited {
-        color: #4158D0;
+    &.submit {
+      background-image: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 10px 0 rgb(85 68 85 / 27%);
       }
+    }
+
+    &.reset {
+      background-color: #545454;
+
+      &:hover {
+        background-color: #000;
+      }
+    }
+  }
+
+  p a {
+    color: $mainColor;
+
+    &:visited {
+      color: #4158D0;
     }
   }
 }

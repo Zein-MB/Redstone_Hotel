@@ -11,7 +11,13 @@ let openMenu = document.querySelector(".open-menu i"),
   signupInputs = document.querySelectorAll("form:first-of-type input"),
   loginInputs = document.querySelectorAll("form:last-of-type input"),
   SresetBtn = document.querySelector("form:first-of-type .reset"),
-  LresetBtn = document.querySelector("form:last-of-type .reset");
+  LresetBtn = document.querySelector("form:last-of-type .reset"),
+  pass = document.getElementById("pass"),
+  showPass = document.getElementById("showPass"),
+  hidePass = document.getElementById("hidePass"),
+  lPass = document.querySelector("form:last-of-type #pass"),
+  lShowPass = document.querySelector("form:last-of-type #showPass"),
+  lHidePass = document.querySelector("form:last-of-type #hidePass");
 
 openMenu.addEventListener("click", () => {
   if (!menu.classList.contains("opened")) {
@@ -88,4 +94,62 @@ forms.forEach((form) => {
   form.onsubmit = (e) => {
     e.preventDefault();
   };
+});
+
+// Show/Hide password button behaviour
+showPass.addEventListener("click", () => {
+  var type = pass.type;
+  if (type == "password") {
+    showPass.classList.add("closed");
+    hidePass.classList.remove("closed");
+    type = "text";
+  }
+  pass.type = type;
+});
+
+lShowPass.addEventListener("click", () => {
+  var type = lPass.type;
+  if (type == "password") {
+    lShowPass.classList.add("closed");
+    lHidePass.classList.remove("closed");
+    type = "text";
+  }
+  lPass.type = type;
+});
+
+hidePass.addEventListener("click", () => {
+  var type = pass.type;
+  if (type == "text") {
+    showPass.classList.remove("closed");
+    hidePass.classList.add("closed");
+    type = "password";
+  }
+  pass.type = type;
+});
+lHidePass.addEventListener("click", () => {
+  var type = lPass.type;
+  if (type == "text") {
+    lShowPass.classList.remove("closed");
+    lHidePass.classList.add("closed");
+    type = "password";
+  }
+  lPass.type = type;
+});
+
+pass.addEventListener("input", () => {
+  if (pass.value != null) {
+    showPass.classList.remove("closed");
+  }
+  if (pass.value == null) {
+    showPass.classList.add("closed");
+  }
+});
+
+lPass.addEventListener("input", () => {
+  if (lPass.value != null) {
+    lShowPass.classList.remove("closed");
+  }
+  if (lPass.value == null) {
+    lShowPass.classList.add("closed");
+  }
 });

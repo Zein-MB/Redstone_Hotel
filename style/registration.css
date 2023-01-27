@@ -76,6 +76,7 @@ main .registration form:last-of-type div:nth-of-type(2) {
 main .registration form div {
   display: grid;
   grid-gap: 10px;
+  position: relative;
 }
 main .registration form div:nth-child(3), main .registration form div:nth-child(4) {
   grid-column: 1/3;
@@ -101,7 +102,14 @@ main .registration form div input:focus {
   border: 2px solid #4158D0;
   outline: none;
 }
-main .registration button {
+main .registration form div:last-of-type i {
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+  cursor: pointer;
+  color: #4158D0;
+}
+main button {
   margin-top: 20px;
   padding: 15px 20px;
   font-size: 18px;
@@ -114,23 +122,23 @@ main .registration button {
   transition: 0.3s;
   letter-spacing: 2px;
 }
-main .registration button.submit {
+main button.submit {
   background-image: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);
 }
-main .registration button.submit:hover {
+main button.submit:hover {
   transform: translateY(-2px);
   box-shadow: 0 5px 10px 0 rgba(85, 68, 85, 0.27);
 }
-main .registration button.reset {
+main button.reset {
   background-color: #545454;
 }
-main .registration button.reset:hover {
+main button.reset:hover {
   background-color: #000;
 }
-main .registration p a {
+main p a {
   color: #e63e94;
 }
-main .registration p a:visited {
+main p a:visited {
   color: #4158D0;
 }
 
