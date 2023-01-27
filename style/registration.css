@@ -1,0 +1,160 @@
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+.closed {
+  display: none !important;
+}
+
+header {
+  position: relative;
+}
+
+main .head-part {
+  position: relative;
+  height: 30vh;
+  background-image: url(../images/bedroom.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .head-part::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.5) 75%);
+}
+main .head-part::after {
+  content: "Registration";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  text-transform: uppercase;
+  font-size: 4em;
+  font-weight: bold;
+  color: #e8eaf6;
+  transform: translate(-50%, -50%);
+}
+main .registration {
+  position: relative;
+  left: 50%;
+  top: 10%;
+  transform: translateX(-50%);
+  padding: 100px 40px;
+  width: 100%;
+  min-height: 728px;
+  background: #C9D6FF;
+  background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);
+  background: linear-gradient(to right, #E2E2E2, #C9D6FF);
+}
+main .registration form {
+  position: absolute;
+  width: fit-content;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #e8eaf6;
+  padding: 40px;
+  border-radius: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: 0.5s ease-out;
+}
+main .registration form:last-of-type div:first-of-type,
+main .registration form:last-of-type div:nth-of-type(2) {
+  grid-column: 1/3;
+}
+main .registration form div {
+  display: grid;
+  grid-gap: 10px;
+}
+main .registration form div:nth-child(3), main .registration form div:nth-child(4) {
+  grid-column: 1/3;
+}
+main .registration form div label {
+  display: block;
+  font-size: 1.25em;
+  color: rgba(39, 39, 39, 0.6901960784);
+}
+main .registration form div label span {
+  color: #e63e94;
+}
+main .registration form div input {
+  padding: 10px 15px;
+  font-size: 20px;
+  position: relative;
+  background-color: aliceblue;
+  border: 1px solid #aaaaaa;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+main .registration form div input:focus {
+  border: 2px solid #4158D0;
+  outline: none;
+}
+main .registration button {
+  margin-top: 20px;
+  padding: 15px 20px;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 700;
+  border: none;
+  color: #e8eaf6;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  letter-spacing: 2px;
+}
+main .registration button.submit {
+  background-image: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);
+}
+main .registration button.submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px 0 rgba(85, 68, 85, 0.27);
+}
+main .registration button.reset {
+  background-color: #545454;
+}
+main .registration button.reset:hover {
+  background-color: #000;
+}
+main .registration p a {
+  color: #e63e94;
+}
+main .registration p a:visited {
+  color: #4158D0;
+}
+
+@media (max-width: 767px) {
+  main .head-part {
+    background-position: center;
+  }
+  main .head-part::after {
+    font-size: 3em;
+  }
+  main .registration form {
+    padding: 20px;
+    column-gap: 0;
+    width: 75%;
+  }
+  main .registration form:first-of-type div:first-child,
+main .registration form:first-of-type div:nth-child(2) {
+    grid-column: 1/3;
+  }
+  main .registration form button,
+main .registration form p {
+    grid-column: 1/3;
+  }
+  main .registration form button:last-of-type {
+    margin-top: 0;
+  }
+}

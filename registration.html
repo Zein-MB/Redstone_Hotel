@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redstone Hotel | Registration</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Courgette&family=Fraunces:opsz,wght@9..144,500&family=Fredoka+One&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Kanit:wght@600;700;900&family=Kumbh+Sans:wght@400;700&family=Libre+Franklin:wght@300;600;700&family=Luckiest+Guy&family=Manrope:wght@700&family=Michroma&family=Montserrat:wght@100;200;300;400;500;700;900&family=Nokora:wght@300;400;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Paytone+One&family=Permanent+Marker&family=Poppins:wght@400;600&family=Ramabhadra&family=Righteous&family=Sriracha&family=Tajawal:wght@200;300;400;500;700;800;900&family=Yanone+Kaffeesatz:wght@700&family=Zen+Dots&display=swap"
+    rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="style/hotel.css">
+  <link rel="stylesheet" href="style/scrollbar.css">
+  <link rel="stylesheet" href="style/registration.css">
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="style/all.min.css">
+</head>
+
+<body>
+  <!-- Start Header -->
+  <header>
+    <section class="logo">
+      <p>Redstone</p>
+    </section>
+    <section class="links">
+      <span class="open-menu"><i class="fa fa-navicon"></i></span>
+      <ul id="menu">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="#reservations">Reservations</a></li>
+        <li><a href="#contactUs">Contact Us</a></li>
+      </ul>
+      <div class="registration">
+        <button><i class="fa fa-sign-in"></i> Sign Up</button>
+      </div>
+    </section>
+  </header>
+  <!-- End Header -->
+  <!-- Start Main -->
+  <main>
+    <div class="head-part"></div>
+    <div class="registration">
+      <!-- Sign Up -->
+      <form action="" method="get" id="signup">
+        <div>
+          <label>First Name<span>*</span></label>
+          <input type="text" name="firstName" required>
+        </div>
+        <div>
+          <label>Last Name<span>*</span></label>
+          <input type="text" name="lastName" required>
+        </div>
+        <div>
+          <label>Email<span>*</span></label>
+          <input type="email" name="email" required>
+        </div>
+        <div>
+          <label>Password<span>*</span></label>
+          <input type="password" name="password" required>
+        </div>
+        <button class="submit" type="submit"><a>Sign Up</a></button>
+        <button class="reset" type="reset">Reset</button>
+        <p>Already have an account ? <a href="#login" id="goLog">Login</a></p>
+      </form>
+      <!-- Login -->
+      <form action="" method="get" id="login" class="closed">
+        <div>
+          <label>Username<span>*</span></label>
+          <input type="text" name="username" required>
+        </div>
+        <div>
+          <label>Password<span>*</span></label>
+          <input type="password" name="password" id="passInput" required>
+        </div>
+        <button class="submit"><a>Login</a></button>
+        <button class="reset">Reset</button>
+        <p>Don't have an account ? <a href="#signup" id="goSign">Sign Up</a></p>
+      </form>
+    </div>
+  </main>
+  <!-- End Main -->
+  <!-- Start Footer -->
+  <footer>
+    <div class="brands">
+      <a href="https://www.facebook.com" target="_blank">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://www.instagram.com" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.twitter.com" target="_blank">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </div>
+    <div class="copyright">
+      <p>&copy;2023 Redstone hotel | all rights reserved</p>
+    </div>
+  </footer>
+  <button class="goTop"><i class="fas fa-chevron-up"></i></button>
+  <!-- End Footer -->
+  <script src="js/hotel.js"></script>
+</body>
+
+</html>
